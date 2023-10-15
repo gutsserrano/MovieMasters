@@ -1,10 +1,10 @@
 .body{
-    background-color: rgb(14, 14, 17);
+    background-color: rgb(16, 8, 28);
     
 }
 
 .navbar {
-    background-color: rgb(105, 94, 120);
+    background-color: rgb(68, 34, 119);
 }
 
 .card-body {
@@ -19,17 +19,25 @@
     
 }
 
+.dropdown-item {
+    --bs-dropdown-link-hover-bg: rgb(68, 34, 119);
+}
+
 ul .dropdown-menu  {
-    background-color: rgb(190, 167, 223);
+    background-color: rgb(122, 68, 202);
+}
+
+button.navbar-toggler{
+    background-color: rgb(122, 68, 202);
 }
 
 #card, #card-vendidos, #card-estreia, #card-avaliados {
-    background-color: rgb(14, 14, 17);
+    background-color: rgb(16, 8, 28);
 }
 
 #imagem {
     border-radius: 5px;
-    border: 3px solid rgb(42, 33, 56);
+    border: 3px solid rgb(68, 34, 119);
     transition: transform 0.2s;
 }
 
@@ -49,24 +57,28 @@ ul .dropdown-menu  {
 
 #imagem_filme{
     border-radius: 5px;
-    border: 3px solid rgb(42, 33, 56);
+    border: 3px solid rgb(68, 34, 119);
     margin: 20px;
 }
 
 #textos{
-    font-weight: 600;
+    font-weight: 500;
 }
 
 footer{
     height: 30px;
-    color: rgb(193, 170, 224);
+    color: white;
     margin: 20px 0px;
-    background-color: rgb(14, 14, 17);
+    background-color: rgb(16, 8, 28);
     padding: 20px 0px;
 }
 
 #trailer-box{
     margin-top: 10px;
+}
+
+#trailer {
+    color: rgb(122, 68, 202);
 }
 
 @media(max-width: 770px){

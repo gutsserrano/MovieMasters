@@ -14,7 +14,7 @@ const options = {
   };
 
 // HOME
-fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pt-BR&page=1&&page=2sort_by=popularity.desc', options)
+fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc', options)
   .then(response => response.json())
   .then(response => {
       console.log('Home')
@@ -96,7 +96,7 @@ fetch('https://api.themoviedb.org/3/movie/'+id, options)
 .then(response => {
     console.log(response);
     
-    document.getElementById('fundo').style = "background-image: linear-gradient(217deg, rgb(182 168 168 / 81%), rgb(196 186 186 / 38%) 70.71%), url('https://image.tmdb.org/t/p/w500"+response.backdrop_path+"')";
+    document.getElementById('fundo').style = //"background-image: linear-gradient(217deg, rgb(182 168 168 / 100%), rgb(196 186 186 / 38%) 100%), url('https://image.tmdb.org/t/p/w500"+response.backdrop_path+"')";
     document.getElementById('titulo_filme').innerText = response.title;
     document.getElementById('imagem_filme').src = "https://image.tmdb.org/t/p/w300"+response.poster_path;
     document.getElementById('resumo_filme').innerText = "Sinopse: "+response.overview;
@@ -136,8 +136,8 @@ fetch('https://api.themoviedb.org/3/movie/'+id+'/videos?language=en-US', options
     const youtubeLink = `https://www.youtube.com/watch?v=${key}`;
     // use youtubeLink as needed
     const officialTrailer = data.results.find(result => {
-      const name = result.name.toLowerCase();
-      return name.includes('official') && name.includes('trailer');
+    const name = result.name.toLowerCase();
+    return name.includes('official') && name.includes('trailer');
     });
     if (officialTrailer) {
       const officialTrailerKey = officialTrailer.key;
