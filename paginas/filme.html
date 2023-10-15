@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site de Filmes</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body class="body">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">MovieMasters</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filmes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="proximas_estreias.html">Futuros lançamentos</a></li>
+                <li><a class="dropdown-item" href="mais_vendidos.html">Mais vendidos</a></li>
+                <li><a class="dropdown-item" href="bem_avaliados.html">Mais bem avaliados</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div id="fundo" class="bg-body-secondary">
+        <div id="filme-box" >
+          <div class="caixa_filme d-flex container">
+            <div class="flex-shrink-0">
+              <img id="imagem_filme" src="" alt="" >
+            </div>
+            <div id="textos" class="ms-3">
+              <div class="">
+                <p id="titulo_filme" class="fs-1"></p>
+                <p id="release"></p>
+                <p id="average" class="fs-6"></p>
+                <p id="count" class="fs-6"></p>
+                <a href="" id="trailer">Assista o Trailer</a>
+              </div>
+              <div id="resumo_filme" class="flex-grow-1 w-75 fs-5 text-break" style="width: 6rem;">
+              </div>
+              <div id="link"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container rodape">
+          <p>&copy; 2023 Augusto Grandini Serrano - Todos os direitos reservados</p>
+        </div>
+      </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
