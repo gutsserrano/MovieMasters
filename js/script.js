@@ -131,8 +131,7 @@ fetch('https://api.themoviedb.org/3/movie/'+id+'/videos?language=en-US', options
     console.log(youtubeLink);
     document.getElementById('trailer').href = youtubeLink; */
 
-    var tag_a = document.createElement("a");
-    var div = document.getElementById('link');
+    
     const key = data.results.slice(-1)[0].key;
     const youtubeLink = `https://www.youtube.com/watch?v=${key}`;
     // use youtubeLink as needed
@@ -144,9 +143,8 @@ fetch('https://api.themoviedb.org/3/movie/'+id+'/videos?language=en-US', options
       const officialTrailerKey = officialTrailer.key;
       const officialTrailerLink = `https://www.youtube.com/watch?v=${officialTrailerKey}`;
       document.getElementById('trailer').href = officialTrailerLink;
-      tag_a.textContent = 'link';
-      tag_a.href = officialTrailerLink;
-      tag_a.appendChild(div);
+    }else{
+      document.getElementById('trailer').remove();
     }
   
   })
